@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 'Google Inc.:Google APIs:23'
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "org.mixare"
+        minSdkVersion 9
+        targetSdkVersion 10
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // It is not include NOTICE file
+        exclude 'META-INF/LICENSE' // It is not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+dependencies {
+    compile files('build/mixarelib.jar')
+    compile files('build/httpclient-4.5.2.jar')
+    compile files('build/httpcore-4.4.4.jar')
+    compile project(':nmaps')
+}

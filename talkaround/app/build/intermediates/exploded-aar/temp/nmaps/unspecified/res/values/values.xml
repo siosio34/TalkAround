@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/nhn/nmap_android_studio/nmap_viewer_android/nmaps/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">nmaps</string>
+</resources>

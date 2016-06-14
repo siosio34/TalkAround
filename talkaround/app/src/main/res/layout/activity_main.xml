@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDD"
+
+    >
+
+    <TextView
+        android:id="@+id/tvIsConnected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#FF0000"
+        android:textColor="#FFF"
+        android:textSize="18dp"
+        android:layout_marginBottom="5dp"
+        android:text="is connected?"
+
+        />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="이 름"
+            android:textColor="#999"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/etName"/>
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvName"/>
+
+        <TextView
+            android:id="@+id/tvCountry"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:text="메시지"
+            android:textColor="#999"
+            android:textStyle="bold"
+            android:layout_alignBaseline="@+id/etMessage"/>
+        <EditText
+            android:id="@+id/etMessage"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tvCountry"
+            android:layout_below="@+id/etName"/>
+
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnPost"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:text="자취 남기기"
+        android:textColor="#fff"
+
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/relativeLayout"
+        android:layout_alignRight="@+id/relativeLayout" />
+
+
+</RelativeLayout>
