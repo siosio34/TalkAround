@@ -37,7 +37,9 @@ import org.mixare.gui.RadarPoints;
 import org.mixare.gui.ScreenLine;
 import org.mixare.render.Camera;
 
+import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.Region;
 import android.location.Location;
 import android.util.Log;
 import android.widget.Toast;
@@ -141,10 +143,14 @@ public class DataView {
 
     // 레이더 관련 변수들
     private RadarPoints radarPoints = new RadarPoints();
+
     private ScreenLine lrl = new ScreenLine();
     private ScreenLine rrl = new ScreenLine();
     private float rx = 10, ry = 20;
+    private float dx = 30, dy = 40;
     private float addX = 0, addY = 0;
+
+
 
 
     /**
@@ -250,6 +256,7 @@ public class DataView {
 
     // 실제로 스크린에 그려주는 메소드
     public void draw(PaintScreen dw) {
+        float addyTemp = 0;
         // 카메라 객체의 회전행렬에 컨텍스트의 회전행렬을 할당
         mixContext.getRM(cam.transform);
         // 수정된 현재 위치에 컨텍스트의 현재위치를 할당
@@ -263,14 +270,14 @@ public class DataView {
         if (state.nextLStatus == MixState.NOT_STARTED && !frozen) {
             // 컨텍스트의 시작 URL 이 할당 되었을 경우
             if (mixContext.getStartUrl().length() > 0) {//여기로 들억가ㅔ 해놨다
-             //  // 자체 포맷과 소스로 데이터를 요청한다
-             //  requestData(mixContext.getStartUrl(), DATAFORMAT.OWNURL, DATASOURCE.OWNURL);
-             //  isLauncherStarted = true;    // 런쳐는 시작된 상태로
+                //  // 자체 포맷과 소스로 데이터를 요청한다
+                //  requestData(mixContext.getStartUrl(), DATAFORMAT.OWNURL, DATASOURCE.OWNURL);
+                //  isLauncherStarted = true;    // 런쳐는 시작된 상태로
 
-             //  // 자체 URL이 선택되지 않은 상태라면 선택된 상태로 토글한다
-             //  if (!mixContext.isDataSourceSelected(DataSource.DATASOURCE.OWNURL)) {
-             //      mixContext.toogleDataSource(DataSource.DATASOURCE.OWNURL);
-             //  }
+                //  // 자체 URL이 선택되지 않은 상태라면 선택된 상태로 토글한다
+                //  if (!mixContext.isDataSourceSelected(DataSource.DATASOURCE.OWNURL)) {
+                //      mixContext.toogleDataSource(DataSource.DATASOURCE.OWNURL);
+                //  }
             }
             // URL 이 할당되지 않았을 경우에는
             else {
@@ -284,7 +291,8 @@ public class DataView {
                         requestData(DataSource.createRequestURL(source, lat, lon, alt, radius, Locale.getDefault().getLanguage()), DataSource.dataFormatFromDataSource(source), source);
 
                         // Debug notification
-                         Toast.makeText(mixContext, "Downloading from "+ source, Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(mixContext, "Downloading from "+ source, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mixContext, "... 데이터 받는 중 ...", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -325,7 +333,7 @@ public class DataView {
                     dataHandler.onLocationChanged(curFix);    // 위치를 재설정
 
                     // 특정 데이터 소스로부터 다운로드 받았음을 알림
-                    Toast.makeText(mixContext, mixContext.getResources().getString(R.string.download_received) + " " + dRes.source, Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(mixContext, mixContext.getResources().getString(R.string.download_received) + " " + dRes.source, Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -342,7 +350,7 @@ public class DataView {
             Marker ma = dataHandler.getMarker(i);
 
 
-          //  if(ma.getDatasource() == DATASOURCE.ARRIVEBUS)
+            //  if(ma.getDatasource() == DATASOURCE.ARRIVEBUS)
             //    Toast.makeText(mixContext,"dddddd",Toast.LENGTH_LONG).show();
 
             //if (ma.isActive() && (ma.getDistance() / 1000f < radius || ma instanceof NavigationMarker || ma instanceof SocialMarker)) {
@@ -356,12 +364,21 @@ public class DataView {
                 // 대신, 위치가 바뀌었을 경우와 새로운 마커를 다운로드 한 이후에
                 // 각 마커의 위치를 재계산 하도록 한다
 
-               // Marker navigationMarker = new NavigationMarker(ma.getTitle(), ma.getLatitude(), ma.getLongitude(), ma.getAltitude(), ma.getURL(), ma.getDatasource());
+                // Marker navigationMarker = new NavigationMarker(ma.getTitle(), ma.getLatitude(), ma.getLongitude(), ma.getAltitude(), ma.getURL(), ma.getDatasource());
 
                 //if (!frozen)
                 //	ma.update(curFix);
                 if (!frozen) {
-                    ma.calcPaint(cam, addX, addY);
+                    float addTemp = 450;
+
+                    if(ma.datasource == DataSource.DATASOURCE.SNS)
+                        addTemp = 300;
+                    else if(ma.datasource == DataSource.DATASOURCE.SCHOOL)
+                        addTemp = 150;
+
+                    //  Log.i("addY값 0_<", String.valueOf(addY));
+
+                    ma.calcPaint(cam, addX, addY+addTemp, ma.datasource);
                 }
                 ma.draw(dw);
             }
@@ -389,11 +406,22 @@ public class DataView {
         // 설정된 값들로 레이더를 그린다
         dw.paintObj(radarPoints, rx, ry, -state.getCurBearing(), 1);
         dw.setFill(false);
-        dw.setColor(Color.argb(150, 0, 0, 220));
+        dw.setColor(Color.argb(150, 50, 50, 50));
         dw.paintLine(lrl.x, lrl.y, rx + RadarPoints.RADIUS, ry + RadarPoints.RADIUS);
         dw.paintLine(rrl.x, rrl.y, rx + RadarPoints.RADIUS, ry + RadarPoints.RADIUS);
         dw.setColor(Color.rgb(255, 255, 255));
         dw.setFontSize(12);
+
+
+
+        //   Bitmap bitmap = DataSource.getBitmap("SNSADD");
+
+        // buttonScreen.view = this;
+        // left top
+        //   dw.paintBitmap(bitmap, dx, dy);
+        //   Region region = new Region(bitmap.ge)
+
+
 
         // 레이더에 출력될 텍스트 설정
         radarText(dw, MixUtils.formatDist(radius * 1000), rx + RadarPoints.RADIUS, ry + RadarPoints.RADIUS * 2 - 10, false);

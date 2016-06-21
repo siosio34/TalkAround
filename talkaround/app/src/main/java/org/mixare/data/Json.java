@@ -144,15 +144,14 @@ public class Json extends DataHandler {
     public Marker processConvenienceJSONObject(JSONObject jo)  throws JSONException {
         Marker ma = null;
 
+
         // 형식에 맞는지 검사. 타이틀과 위도, 경도, 고도 태그를 찾는다
         if (jo.has("x") && jo.has("y") && jo.has("name")) {
             Log.v(MixView.TAG, "processing Mixare JSON object");    // 로그 출력
-            String link = "http://www.naver.com";
 
-            // TODO: 2016-05-31 link 에 관한 처리를 합시다.
-            // 웹페이지의 형식을 검사하고 스트링 값을 읽어온다
-            if (jo.has("has_detail_page") && jo.getInt("has_detail_page") != 0 && jo.has("webpage"))
-                link = jo.getString("webpage");
+            String linkTemp = null;
+            linkTemp = jo.getString("id");
+            String link = "http://lab.khlug.org/manapie/javap/getRes.php?id=" + linkTemp.substring(1);
 
             // 할당된 값들로 마커 생성, // 일단은 경도, 위도, 이름만.
             // 맨뒤에값은 플래그 일단 Flag 0 는 카페정보
@@ -161,7 +160,7 @@ public class Json extends DataHandler {
                     jo.getDouble("y"),
                     jo.getDouble("x"),
                     0,
-                    null,
+                    link,
                     DataSource.DATASOURCE.Convenience,"CONVENICE");
         }
         return ma;    // 마커 리턴
@@ -173,6 +172,10 @@ public class Json extends DataHandler {
         // 형식에 맞는지 검사. 타이틀과 위도, 경도, 고도 태그를 찾는다
         if (jo.has("x") && jo.has("y") && jo.has("name")) {
 
+            String linkTemp = null;
+            linkTemp = jo.getString("id");
+            String link = "http://lab.khlug.org/manapie/javap/getRes.php?id=" + linkTemp.substring(1);
+
             // 할당된 값들로 마커 생성, // 일단은 경도, 위도, 이름만.
             // 맨뒤에값은 플래그 일단 Flag 0 는 카페정보
             ma = new SocialMarker(
@@ -180,7 +183,7 @@ public class Json extends DataHandler {
                     jo.getDouble("y"),
                     jo.getDouble("x"),
                     0,
-                    null,
+                    link,
                     DataSource.DATASOURCE.Restaurant, "RESTRAUNT");
         }
         return ma;    // 마커 리턴
@@ -192,6 +195,10 @@ public class Json extends DataHandler {
         // 형식에 맞는지 검사. 타이틀과 위도, 경도, 고도 태그를 찾는다
         if (jo.has("x") && jo.has("y") && jo.has("name")) {
 
+            String linkTemp = null;
+            linkTemp = jo.getString("id");
+            String link = ("http://lab.khlug.org/manapie/javap/getRes.php?id=") + (linkTemp.substring(1));
+
             // 할당된 값들로 마커 생성, // 일단은 경도, 위도, 이름만.
             // 맨뒤에값은 플래그 일단 Flag 0 는 카페정보
             ma = new SocialMarker(
@@ -199,7 +206,7 @@ public class Json extends DataHandler {
                     jo.getDouble("y"),
                     jo.getDouble("x"),
                     0,
-                    null,
+                    link,
                     DataSource.DATASOURCE.CAFE, "CAFE");
         }
         return ma;    // 마커 리턴
@@ -305,16 +312,16 @@ public class Json extends DataHandler {
         Marker ma = null;
 
 
-      //  if(jo.getJSONObject("result").getInt("resultCode") != 0) {
+        //  if(jo.getJSONObject("result").getInt("resultCode") != 0) {
 //
-      //      ma = new SocialMarker(
-      //              "좀 되라 시발 좀 되라고",
-      //              0,
-      //              0,
-      //              0,
-      //              "",
-      //              DataSource.DATASOURCE.ARRIVEBUS, 10);
-      //  }
+        //      ma = new SocialMarker(
+        //              "좀 되라 시발 좀 되라고",
+        //              0,
+        //              0,
+        //              0,
+        //              "",
+        //              DataSource.DATASOURCE.ARRIVEBUS, 10);
+        //  }
         return ma;
 
     }
@@ -351,7 +358,7 @@ public class Json extends DataHandler {
     // 자체 데이터의 처리
     public Marker processMixareJSONObject(JSONObject jo) throws JSONException {
 
-      return null;
+        return null;
     }
 
     public Marker processSNSJSONObject(JSONObject jo) throws JSONException {
@@ -364,7 +371,7 @@ public class Json extends DataHandler {
 
             idStr = jo.getString("id");
             snsLink = ("http://lab.khlug.org/manapie/javap/message.php?id=" + idStr);
-            ma = new SnsMarker(jo.getString("name"),Double.parseDouble(jo.getString("latitude")),
+            ma = new SnsMarker("[발자취] " + jo.getString("name"),Double.parseDouble(jo.getString("latitude")),
                     Double.parseDouble(jo.getString("longitude")),0,snsLink,DataSource.DATASOURCE.SNS,jo.getString("message"),jo.getString("time"));
 
         }

@@ -1,6 +1,14 @@
 [
     {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\color\\callout_textcolor.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\color\\callout_textcolor.xml"
+    },
+    {
         "merged": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\build\\intermediates\\res\\merged\\debug\\color\\callout_textcolor.xml",
         "source": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\src\\main\\res\\color\\callout_textcolor.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\color\\callout_textcolor.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\color\\callout_textcolor.xml"
     }
 ]

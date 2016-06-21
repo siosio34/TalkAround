@@ -39,10 +39,10 @@ import java.util.List;
 public class MixState {
 
 	// 각 상태에 대한 상수값 설정
-	public static int NOT_STARTED = 0; 
-	public static int PROCESSING = 1; 
-	public static int READY = 2; 
-	public static int DONE = 3; 
+	public static int NOT_STARTED = 0;
+	public static int PROCESSING = 1;
+	public static int READY = 2;
+	public static int DONE = 3;
 
 	int nextLStatus = MixState.NOT_STARTED;	// 다음 상태
 	String downloadId;	// 다운로드할 ID
@@ -58,7 +58,7 @@ public class MixState {
 		// 눌려진 스트링 값이 null 이 아니고, 웹페이지로 연결될 경우
 		if (onPress != null && onPress.startsWith("webpage")) {
 			try {
-				// 내용을 파싱하고 디테일 뷰에 웹페이지를 띄운다 
+				// 내용을 파싱하고 디테일 뷰에 웹페이지를 띄운다
 				String webpage = MixUtils.parseAction(onPress);
 				this.detailsView = true;
 				ctx.loadMixViewWebPage(webpage);
@@ -66,69 +66,85 @@ public class MixState {
 			}
 		}
 		else{*/
-			DialogSelectOption(ctx, title, log, onPress);
+		DialogSelectOption(ctx, title, log, onPress);
 		//}
 
 
-	//else if(onPress != null && onPress.contains(cs1)) { // 버스정보에요
-	//
-	//	//new HttpAsyncTask().execute("http://hmkcode.appspot.com/rest/controller/get.json");
+		//else if(onPress != null && onPress.contains(cs1)) { // 버스정보에요
+		//
+		//	//new HttpAsyncTask().execute("http://hmkcode.appspot.com/rest/controller/get.json");
 
-	//	//DownloadRequest requestData = new DownloadRequest();
+		//	//DownloadRequest requestData = new DownloadRequest();
 
-	//	//requestData(DataSource.createRequestURL(source, lat, lon, alt, radius, Locale.getDefault().getLanguage()), DataSource.dataFormatFromDataSource(source), source);
+		//	//requestData(DataSource.createRequestURL(source, lat, lon, alt, radius, Locale.getDefault().getLanguage()), DataSource.dataFormatFromDataSource(source), source);
 
 
-	//}
+		//}
 		return true;
 	}
 
 	public void DialogSelectOption(final MixContext ctx, final String markerTitle, final PhysicalPlace log, final String onPress) {
-		final String items[] = { "네이버지도", "길찾기 시작", "정보보기" };
+		final String items[] = {"자세히 보기", "지도에서 길 찾기", "네비게이션" };
 		AlertDialog.Builder ab = new AlertDialog.Builder(ctx);
 		ab.setTitle(markerTitle);
 		ab.setItems(items,
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // 프로그램을 종료한다
-                        Toast.makeText(ctx,
-                                items[id] + " 선택했습니다.",
-                                Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialog, int id) {
+						// 프로그램을 종료한다
+						Toast.makeText(ctx,
+								items[id] + " 선택했습니다.",
+								Toast.LENGTH_SHORT).show();
+						dialog.dismiss();
 
-                        if (id == 0) {
-                            //TODO : 길찾기 마커 리스트 넘기기
-                            Intent markerNaverIntent = new Intent(ctx, MixNaverMap.class);
-                            markerNaverIntent.putExtra("latitude", log.getLatitude());
-                            markerNaverIntent.putExtra("longitude", log.getLongitude());
-                            markerNaverIntent.putExtra("marker_title", markerTitle);
-                            ctx.startActivity(markerNaverIntent);
-                        } else if (id == 1) {
-                            Location curloc = ctx.getCurrentLocation();
-                            final String url = DataSource.createNaverMapRequestURL(curloc.getLongitude(), curloc.getLatitude(), log.getLongitude(), log.getLatitude());
-                            String result = "";
-                            //HttpConnection httpConnection = new HttpConnection();
-                            try {
-                                result = (new HttpConnection()).execute(url).get();
-                                Log.d("NaverJson", result);
+						if (id == 1) {
+							//TODO : 길찾기 마커 리스트 넘기기
+							Intent markerNaverIntent = new Intent(ctx, MixNaverMap.class);
+							markerNaverIntent.putExtra("latitude", log.getLatitude());
+							markerNaverIntent.putExtra("longitude", log.getLongitude());
+							markerNaverIntent.putExtra("marker_title", markerTitle);
+							ctx.startActivity(markerNaverIntent);
 
-                                List<Marker> pathMarkerList = parseJSONtoMarker(result);
-                                Navi2.pathMarkerList = pathMarkerList;
-                                Log.d("NaverGetPath", "get Json data done");
-                            } catch (Exception e) {
-                                Log.e("HttpConnection", "" + e);
-                            }
+						} else if (id == 2) {
 
-                            Navi2.isStart = true;
-                            //GPSThread.isStart=true;
-                        } else if (id == 2) {
-                            try {
-                                String webpage = MixUtils.parseAction(onPress);
-                                //this.detailsView = true;
-                                ctx.loadMixViewWebPage(webpage);
-                            } catch (Exception e) {
-                            }
-                        }
+							if(ctx.getCurrentLocation().getLongitude() != 0 && ctx.getCurrentLocation().getLatitude() !=0) {
+
+								final String url = DataSource.createNaverMapRequestURL(ctx.getCurrentLocation().getLongitude(),ctx.getCurrentLocation().getLatitude(), log.getLongitude(), log.getLatitude());
+
+								String result = "";
+								//HttpConnection httpConnection = new HttpConnection();
+								try {
+									result = (new HttpConnection()).execute(url).get();
+
+									Log.d("NaverJson", result);
+									Toast.makeText(ctx,result,Toast.LENGTH_LONG).show();
+
+									List<Marker> pathMarkerList = parseJSONtoMarker(result);
+
+									Log.d("NaverJson2", pathMarkerList.get(0).getTitle());
+									Toast.makeText(ctx,pathMarkerList.get(0).getTitle(),Toast.LENGTH_LONG).show();
+
+									Navi2.pathMarkerList = pathMarkerList;
+									Log.d("NaverGetPath", "get Json data done");
+
+								} catch (Exception e) {
+									Log.e("HttpConnection", "" + e);
+								}
+
+								Navi2.isStart = true;
+							}
+						//else
+						//{
+						//	//Toast.makeText(ctx, "gps 없음", Toast.LENGTH_SHORT).show();
+						//}
+							//GPSThread.isStart=true;
+						} else if (id == 0) {
+							try {
+								String webpage = MixUtils.parseAction(onPress);
+								//this.detailsView = true;
+								ctx.loadMixViewWebPage(webpage);
+							} catch (Exception e) {
+							}
+						}
 					}
 				}
 		);
@@ -138,14 +154,13 @@ public class MixState {
 		alertDialog.show();
 	}
 
-    //TODO : pny
-    private List<Marker> parseJSONtoMarker(String json) throws JSONException {
-        JSONObject root = new JSONObject(json);
-        Json jsonClass = new Json();
-        List<Marker> markers = jsonClass.load(root, DataSource.DATAFORMAT.NAVER);
+	private List<Marker> parseJSONtoMarker(String json) throws JSONException {
+		JSONObject root = new JSONObject(json);
+		Json jsonClass = new Json();
+		List<Marker> markers = jsonClass.load(root, DataSource.DATAFORMAT.NAVER);
 
-        return markers;
-    }
+		return markers;
+	}
 
 	// 현재의 방위각을 리턴
 	public float getCurBearing() {
@@ -156,12 +171,12 @@ public class MixState {
 	public float getCurPitch() {
 		return curPitch;
 	}
-	
+
 	// 디테일 뷰의 표시 여부를 리턴
 	public boolean isDetailsView() {
 		return detailsView;
 	}
-	
+
 	// 디테일 뷰의 표시 여부를 설정
 	public void setDetailsView(boolean detailsView) {
 		this.detailsView = detailsView;

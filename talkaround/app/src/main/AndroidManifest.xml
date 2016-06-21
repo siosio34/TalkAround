@@ -44,8 +44,8 @@
                		android:value=".MixView" />
         </activity>
         
-		<activity android:name="MixListView" 
-			android:screenOrientation="user" 
+		<activity android:name="MixListView"
+			android:screenOrientation="landscape"
 			android:launchMode="singleTop">
 			<intent-filter>
 	            <action android:name="android.intent.action.SEARCH" />
@@ -55,7 +55,7 @@
 		</activity>
 
 		<activity android:name="MixNaverMap"
-			android:screenOrientation="user" 
+			android:screenOrientation="landscape"
 			android:launchMode="singleTop">
 			<intent-filter>
 	            <action android:name="android.intent.action.SEARCH" />
@@ -64,7 +64,10 @@
                    	android:resource="@xml/searchable"/>
 		</activity>
 
-		<activity android:name="HttpPostSNS"/>
+		<activity android:name="HttpPostSNS"
+					android:screenOrientation="landscape">
+
+		</activity>
 </application>
 
 <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>

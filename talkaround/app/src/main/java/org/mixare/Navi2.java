@@ -74,6 +74,10 @@ public class Navi2 implements Runnable {
                 for(int i=0; i<pathMarkerList.size(); i++){
                     path[i]=pathMarkerList.get(i).getDistance();
                     pathName[i]=pathMarkerList.get(i).getDescription();
+
+                    Log.i("path",String.valueOf(path[i]));
+                    Log.i("Pathname",String.valueOf(path[i]));
+
                 }
              //   path[pathMarkerList.size()-1]=-1;
                 //초기값 세팅

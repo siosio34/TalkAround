@@ -66,7 +66,7 @@ public class SocialMarker extends Marker {
 	public void draw(PaintScreen dw) {
 
 		// 텍스트 블록을 그린다
-		drawTextBlock(dw);
+		drawTextBlock(dw,datasource);
 
 		// 보여지는 상황이라면
 		if (isVisible) {

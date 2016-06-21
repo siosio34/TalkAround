@@ -42,21 +42,21 @@ public class TextObj implements ScreenObj {
 
 	// 기본 생성자. 텍스트와 폰트 크기, 최대넓이와 출력될 스크린, 밑줄 여부를 인자로 받음
 	public TextObj(String txtInit, float fontSizeInit, float maxWidth,
-			PaintScreen dw, boolean underline) {
+				   PaintScreen dw, boolean underline) {
 
 		// 경계는 흰색, 배경은 반투명한 검은색, 텍스트는 흰색, 텍스트 그림자는 반투명한 검은색
 		// 등으로 기본세팅 
 		this(txtInit, fontSizeInit, maxWidth, Color.rgb(255, 255, 255), Color
-				.argb(128, 0, 0, 0), Color.rgb(255, 255, 255), Color.argb(64, 0, 0, 0),
+						.argb(128, 0, 0, 0), Color.rgb(255, 255, 255), Color.argb(35, 0, 0, 0),
 				dw.getTextAsc() / 2, dw, underline);
 	}
 
 	// 확장된 생성자.
 	// 위의 생성자에 추가로 경계색, 배경색, 텍스트색, 그림자색, 여백 등의 정보를 담는다
 	public TextObj(String txtInit, float fontSizeInit, float maxWidth,
-			int borderColor, int bgColor, int textColor, int textShadowColor, float pad,
-			PaintScreen dw, boolean underline) {
-		
+				   int borderColor, int bgColor, int textColor, int textShadowColor, float pad,
+				   PaintScreen dw, boolean underline) {
+
 		this.borderColor = borderColor;
 		this.bgColor = bgColor;
 		this.textColor = textColor;
@@ -75,13 +75,13 @@ public class TextObj implements ScreenObj {
 
 	// 텍스트 준비? 적절한 크기로 라인을 나누는 것 같다.
 	private void prepTxt(String txtInit, float fontSizeInit, float maxWidth,
-			PaintScreen dw) {
+						 PaintScreen dw) {
 		dw.setFontSize(fontSizeInit);
 
 		// 일단 텍스트를 담아두고 폰트의 크기를 설정한다
 		txt = txtInit;
 		fontSize = fontSizeInit;
-		
+
 		// 여백을 이용해 실제 영역의 넓이를 구하고, 라인의 높이를 구한다 
 		areaWidth = maxWidth - pad * 2;
 		lineHeight = dw.getTextAsc() + dw.getTextDesc()
@@ -154,24 +154,24 @@ public class TextObj implements ScreenObj {
 		// 각 라인별로 텍스트를 출력
 		for (int i = 0; i < lines.length; i++) {
 			String line = lines[i];
-			
+
 			// stroke
 /* 			dw.setFill(false);
 			dw.setStrokeWidth(4);
 		    dw.setColor(textShadowColor);
 			dw.paintText(pad, pad + lineHeight * i + dw.getTextAsc(), line);
 */
-			
+
 			// actual text
 
 			// 출력모드를 설정하고
 			dw.setFill(true);
 			dw.setStrokeWidth(0);
 			dw.setColor(textColor);
-			
+
 			// 실제 텍스트를 뿌려준다
 			dw.paintText(pad, pad + lineHeight * i + dw.getTextAsc(), line, underline);
-			
+
 		}
 	}
 

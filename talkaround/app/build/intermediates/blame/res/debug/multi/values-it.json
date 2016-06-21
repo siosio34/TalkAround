@@ -1,5 +1,981 @@
 [
     {
+        "outputFile": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\values-it\\values-it.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 31,
+                    "endOffset": 82
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 219,
+                        "endColumn": 31,
+                        "endOffset": 246
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 87,
+                    "endColumn": 31,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 31,
+                        "endOffset": 180
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 33,
+                    "endOffset": 148
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 185,
+                        "endColumn": 33,
+                        "endOffset": 214
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 153,
+                    "endColumn": 33,
+                    "endOffset": 182
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 383,
+                        "endColumn": 33,
+                        "endOffset": 412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 187,
+                    "endColumn": 31,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 285,
+                        "endColumn": 31,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 33,
+                    "endOffset": 248
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 251,
+                        "endColumn": 33,
+                        "endOffset": 280
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 253,
+                    "endColumn": 33,
+                    "endOffset": 282
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 317,
+                        "endColumn": 33,
+                        "endOffset": 346
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 287,
+                    "endColumn": 31,
+                    "endOffset": 314
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 351,
+                        "endColumn": 31,
+                        "endOffset": 378
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 319,
+                    "endColumn": 49,
+                    "endOffset": 364
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 1,
+                        "startOffset": 2935,
+                        "endColumn": 46,
+                        "endOffset": 2980
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 369,
+                    "endColumn": 49,
+                    "endOffset": 414
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 1,
+                        "startOffset": 2846,
+                        "endColumn": 46,
+                        "endOffset": 2891
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 419,
+                    "endColumn": 43,
+                    "endOffset": 458
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 43,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 463,
+                    "endColumn": 47,
+                    "endOffset": 506
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 1,
+                        "startOffset": 2583,
+                        "endColumn": 44,
+                        "endOffset": 2626
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 511,
+                    "endColumn": 66,
+                    "endOffset": 573
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 1,
+                        "startOffset": 2298,
+                        "endColumn": 63,
+                        "endOffset": 2360
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 578,
+                    "endColumn": 71,
+                    "endOffset": 645
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 1,
+                        "startOffset": 2362,
+                        "endColumn": 68,
+                        "endOffset": 2429
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 650,
+                    "endColumn": 191,
+                    "endOffset": 837
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 1,
+                        "startOffset": 2109,
+                        "endColumn": 188,
+                        "endOffset": 2296
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 842,
+                    "endColumn": 144,
+                    "endOffset": 982
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 1,
+                        "startOffset": 1754,
+                        "endColumn": 141,
+                        "endOffset": 1894
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 987,
+                    "endColumn": 67,
+                    "endOffset": 1050
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 1,
+                        "startOffset": 1896,
+                        "endColumn": 64,
+                        "endOffset": 1959
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1055,
+                    "endColumn": 77,
+                    "endOffset": 1128
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 1,
+                        "startOffset": 1961,
+                        "endColumn": 74,
+                        "endOffset": 2034
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1133,
+                    "endColumn": 73,
+                    "endOffset": 1202
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 1,
+                        "startOffset": 2036,
+                        "endColumn": 70,
+                        "endOffset": 2105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1207,
+                    "endColumn": 88,
+                    "endOffset": 1291
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 1,
+                        "startOffset": 3508,
+                        "endColumn": 85,
+                        "endOffset": 3592
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1296,
+                    "endColumn": 89,
+                    "endOffset": 1381
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 1,
+                        "startOffset": 3594,
+                        "endColumn": 86,
+                        "endOffset": 3679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1386,
+                    "endColumn": 87,
+                    "endOffset": 1469
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 1,
+                        "startOffset": 3423,
+                        "endColumn": 84,
+                        "endOffset": 3506
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1474,
+                    "endColumn": 91,
+                    "endOffset": 1561
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 1,
+                        "startOffset": 3334,
+                        "endColumn": 88,
+                        "endOffset": 3421
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1566,
+                    "endColumn": 131,
+                    "endOffset": 1693
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 423,
+                        "endColumn": 131,
+                        "endOffset": 550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1698,
+                    "endColumn": 56,
+                    "endOffset": 1750
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 1,
+                        "startOffset": 2696,
+                        "endColumn": 53,
+                        "endOffset": 2748
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1755,
+                    "endColumn": 68,
+                    "endOffset": 1819
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 1,
+                        "startOffset": 2628,
+                        "endColumn": 65,
+                        "endOffset": 2692
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1824,
+                    "endColumn": 60,
+                    "endOffset": 1880
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 1,
+                        "startOffset": 2982,
+                        "endColumn": 57,
+                        "endOffset": 3038
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1885,
+                    "endColumn": 49,
+                    "endOffset": 1930
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 1,
+                        "startOffset": 2799,
+                        "endColumn": 46,
+                        "endOffset": 2844
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1935,
+                    "endLine": 39,
+                    "endColumn": 10,
+                    "endOffset": 2659
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 1,
+                        "startOffset": 676,
+                        "endLine": 28,
+                        "endColumn": 10,
+                        "endOffset": 1403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2664,
+                    "endColumn": 49,
+                    "endOffset": 2709
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 1,
+                        "startOffset": 2536,
+                        "endColumn": 46,
+                        "endOffset": 2581
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2714,
+                    "endColumn": 51,
+                    "endOffset": 2761
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 1,
+                        "startOffset": 2750,
+                        "endColumn": 48,
+                        "endOffset": 2797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2766,
+                    "endColumn": 71,
+                    "endOffset": 2833
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 1,
+                        "startOffset": 3263,
+                        "endColumn": 68,
+                        "endOffset": 3330
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2838,
+                    "endColumn": 52,
+                    "endOffset": 2886
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 1,
+                        "startOffset": 3153,
+                        "endColumn": 49,
+                        "endOffset": 3201
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2891,
+                    "endColumn": 54,
+                    "endOffset": 2941
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 1,
+                        "startOffset": 3042,
+                        "endColumn": 51,
+                        "endOffset": 3092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2946,
+                    "endColumn": 61,
+                    "endOffset": 3003
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 1,
+                        "startOffset": 3094,
+                        "endColumn": 58,
+                        "endOffset": 3151
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3008,
+                    "endColumn": 60,
+                    "endOffset": 3064
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 1,
+                        "startOffset": 3203,
+                        "endColumn": 57,
+                        "endOffset": 3259
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 3069,
+                    "endColumn": 58,
+                    "endOffset": 3123
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 1,
+                        "startOffset": 1407,
+                        "endColumn": 55,
+                        "endOffset": 1461
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 3128,
+                    "endColumn": 59,
+                    "endOffset": 3183
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 1,
+                        "startOffset": 1463,
+                        "endColumn": 56,
+                        "endOffset": 1518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3188,
+                    "endColumn": 45,
+                    "endOffset": 3229
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 1,
+                        "startOffset": 1520,
+                        "endColumn": 42,
+                        "endOffset": 1561
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 3234,
+                    "endColumn": 59,
+                    "endOffset": 3289
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 1,
+                        "startOffset": 1563,
+                        "endColumn": 56,
+                        "endOffset": 1618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 3294,
+                    "endColumn": 47,
+                    "endOffset": 3337
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 1,
+                        "startOffset": 1620,
+                        "endColumn": 44,
+                        "endOffset": 1663
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 3342,
+                    "endColumn": 44,
+                    "endOffset": 3382
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 1,
+                        "startOffset": 1665,
+                        "endColumn": 41,
+                        "endOffset": 1705
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 3387,
+                    "endColumn": 47,
+                    "endOffset": 3430
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 1,
+                        "startOffset": 1707,
+                        "endColumn": 44,
+                        "endOffset": 1750
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 3435,
+                    "endColumn": 105,
+                    "endOffset": 3536
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 1,
+                        "startOffset": 2432,
+                        "endColumn": 102,
+                        "endOffset": 2533
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 3541,
+                    "endColumn": 124,
+                    "endOffset": 3661
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 1,
+                        "startOffset": 552,
+                        "endColumn": 121,
+                        "endOffset": 672
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 3666,
+                    "endColumn": 75,
+                    "endOffset": 3737
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 76,
+                        "startColumn": 1,
+                        "startOffset": 3833,
+                        "endColumn": 72,
+                        "endOffset": 3904
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 3742,
+                    "endColumn": 81,
+                    "endOffset": 3819
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 77,
+                        "startColumn": 1,
+                        "startOffset": 3906,
+                        "endColumn": 78,
+                        "endOffset": 3983
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 3824,
+                    "endColumn": 82,
+                    "endOffset": 3902
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 73,
+                        "startColumn": 1,
+                        "startOffset": 3683,
+                        "endColumn": 79,
+                        "endOffset": 3761
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 3907,
+                    "endColumn": 51,
+                    "endOffset": 3954
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 51,
+                        "endOffset": 147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 3959,
+                    "endColumn": 70,
+                    "endOffset": 4025
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 1,
+                        "startOffset": 3763,
+                        "endColumn": 67,
+                        "endOffset": 3829
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 4030,
+                    "endColumn": 44,
+                    "endOffset": 4070
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 1,
+                        "startOffset": 2893,
+                        "endColumn": 41,
+                        "endOffset": 2933
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "C:\\androidPrj_AR\\mixare3\\app\\build\\intermediates\\res\\merged\\debug\\values-it\\values-it.xml",
         "map": [
             {
@@ -1940,6 +2916,982 @@
                 },
                 "from": {
                     "file": "C:\\temp (2) (2) (4) (2)\\temp\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 1,
+                        "startOffset": 2893,
+                        "endColumn": 41,
+                        "endOffset": 2933
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "outputFile": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\values-it\\values-it.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 31,
+                    "endOffset": 82
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 219,
+                        "endColumn": 31,
+                        "endOffset": 246
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 87,
+                    "endColumn": 31,
+                    "endOffset": 114
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 153,
+                        "endColumn": 31,
+                        "endOffset": 180
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 119,
+                    "endColumn": 33,
+                    "endOffset": 148
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 185,
+                        "endColumn": 33,
+                        "endOffset": 214
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 153,
+                    "endColumn": 33,
+                    "endOffset": 182
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 383,
+                        "endColumn": 33,
+                        "endOffset": 412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 187,
+                    "endColumn": 31,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 285,
+                        "endColumn": 31,
+                        "endOffset": 312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 33,
+                    "endOffset": 248
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 251,
+                        "endColumn": 33,
+                        "endOffset": 280
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 253,
+                    "endColumn": 33,
+                    "endOffset": 282
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 317,
+                        "endColumn": 33,
+                        "endOffset": 346
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 287,
+                    "endColumn": 31,
+                    "endOffset": 314
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 351,
+                        "endColumn": 31,
+                        "endOffset": 378
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 319,
+                    "endColumn": 49,
+                    "endOffset": 364
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 1,
+                        "startOffset": 2935,
+                        "endColumn": 46,
+                        "endOffset": 2980
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 369,
+                    "endColumn": 49,
+                    "endOffset": 414
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 1,
+                        "startOffset": 2846,
+                        "endColumn": 46,
+                        "endOffset": 2891
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 419,
+                    "endColumn": 43,
+                    "endOffset": 458
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 56,
+                        "endColumn": 43,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 463,
+                    "endColumn": 47,
+                    "endOffset": 506
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 1,
+                        "startOffset": 2583,
+                        "endColumn": 44,
+                        "endOffset": 2626
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 511,
+                    "endColumn": 66,
+                    "endOffset": 573
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 1,
+                        "startOffset": 2298,
+                        "endColumn": 63,
+                        "endOffset": 2360
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 578,
+                    "endColumn": 71,
+                    "endOffset": 645
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 1,
+                        "startOffset": 2362,
+                        "endColumn": 68,
+                        "endOffset": 2429
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 650,
+                    "endColumn": 191,
+                    "endOffset": 837
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 1,
+                        "startOffset": 2109,
+                        "endColumn": 188,
+                        "endOffset": 2296
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 842,
+                    "endColumn": 144,
+                    "endOffset": 982
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 1,
+                        "startOffset": 1754,
+                        "endColumn": 141,
+                        "endOffset": 1894
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 987,
+                    "endColumn": 67,
+                    "endOffset": 1050
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 1,
+                        "startOffset": 1896,
+                        "endColumn": 64,
+                        "endOffset": 1959
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1055,
+                    "endColumn": 77,
+                    "endOffset": 1128
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 1,
+                        "startOffset": 1961,
+                        "endColumn": 74,
+                        "endOffset": 2034
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1133,
+                    "endColumn": 73,
+                    "endOffset": 1202
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 1,
+                        "startOffset": 2036,
+                        "endColumn": 70,
+                        "endOffset": 2105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1207,
+                    "endColumn": 88,
+                    "endOffset": 1291
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 1,
+                        "startOffset": 3508,
+                        "endColumn": 85,
+                        "endOffset": 3592
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1296,
+                    "endColumn": 89,
+                    "endOffset": 1381
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 1,
+                        "startOffset": 3594,
+                        "endColumn": 86,
+                        "endOffset": 3679
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1386,
+                    "endColumn": 87,
+                    "endOffset": 1469
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 1,
+                        "startOffset": 3423,
+                        "endColumn": 84,
+                        "endOffset": 3506
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1474,
+                    "endColumn": 91,
+                    "endOffset": 1561
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 1,
+                        "startOffset": 3334,
+                        "endColumn": 88,
+                        "endOffset": 3421
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1566,
+                    "endColumn": 131,
+                    "endOffset": 1693
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 423,
+                        "endColumn": 131,
+                        "endOffset": 550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1698,
+                    "endColumn": 56,
+                    "endOffset": 1750
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 1,
+                        "startOffset": 2696,
+                        "endColumn": 53,
+                        "endOffset": 2748
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1755,
+                    "endColumn": 68,
+                    "endOffset": 1819
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 1,
+                        "startOffset": 2628,
+                        "endColumn": 65,
+                        "endOffset": 2692
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 28,
+                    "startColumn": 4,
+                    "startOffset": 1824,
+                    "endColumn": 60,
+                    "endOffset": 1880
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 1,
+                        "startOffset": 2982,
+                        "endColumn": 57,
+                        "endOffset": 3038
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1885,
+                    "endColumn": 49,
+                    "endOffset": 1930
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 1,
+                        "startOffset": 2799,
+                        "endColumn": 46,
+                        "endOffset": 2844
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 30,
+                    "startColumn": 4,
+                    "startOffset": 1935,
+                    "endLine": 39,
+                    "endColumn": 10,
+                    "endOffset": 2659
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 1,
+                        "startOffset": 676,
+                        "endLine": 28,
+                        "endColumn": 10,
+                        "endOffset": 1403
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2664,
+                    "endColumn": 49,
+                    "endOffset": 2709
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 1,
+                        "startOffset": 2536,
+                        "endColumn": 46,
+                        "endOffset": 2581
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2714,
+                    "endColumn": 51,
+                    "endOffset": 2761
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 1,
+                        "startOffset": 2750,
+                        "endColumn": 48,
+                        "endOffset": 2797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 42,
+                    "startColumn": 4,
+                    "startOffset": 2766,
+                    "endColumn": 71,
+                    "endOffset": 2833
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 1,
+                        "startOffset": 3263,
+                        "endColumn": 68,
+                        "endOffset": 3330
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 43,
+                    "startColumn": 4,
+                    "startOffset": 2838,
+                    "endColumn": 52,
+                    "endOffset": 2886
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 1,
+                        "startOffset": 3153,
+                        "endColumn": 49,
+                        "endOffset": 3201
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 44,
+                    "startColumn": 4,
+                    "startOffset": 2891,
+                    "endColumn": 54,
+                    "endOffset": 2941
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 1,
+                        "startOffset": 3042,
+                        "endColumn": 51,
+                        "endOffset": 3092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 45,
+                    "startColumn": 4,
+                    "startOffset": 2946,
+                    "endColumn": 61,
+                    "endOffset": 3003
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 1,
+                        "startOffset": 3094,
+                        "endColumn": 58,
+                        "endOffset": 3151
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3008,
+                    "endColumn": 60,
+                    "endOffset": 3064
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 1,
+                        "startOffset": 3203,
+                        "endColumn": 57,
+                        "endOffset": 3259
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 47,
+                    "startColumn": 4,
+                    "startOffset": 3069,
+                    "endColumn": 58,
+                    "endOffset": 3123
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 1,
+                        "startOffset": 1407,
+                        "endColumn": 55,
+                        "endOffset": 1461
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 48,
+                    "startColumn": 4,
+                    "startOffset": 3128,
+                    "endColumn": 59,
+                    "endOffset": 3183
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 1,
+                        "startOffset": 1463,
+                        "endColumn": 56,
+                        "endOffset": 1518
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 49,
+                    "startColumn": 4,
+                    "startOffset": 3188,
+                    "endColumn": 45,
+                    "endOffset": 3229
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 1,
+                        "startOffset": 1520,
+                        "endColumn": 42,
+                        "endOffset": 1561
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 50,
+                    "startColumn": 4,
+                    "startOffset": 3234,
+                    "endColumn": 59,
+                    "endOffset": 3289
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 1,
+                        "startOffset": 1563,
+                        "endColumn": 56,
+                        "endOffset": 1618
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 3294,
+                    "endColumn": 47,
+                    "endOffset": 3337
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 1,
+                        "startOffset": 1620,
+                        "endColumn": 44,
+                        "endOffset": 1663
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 52,
+                    "startColumn": 4,
+                    "startOffset": 3342,
+                    "endColumn": 44,
+                    "endOffset": 3382
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 1,
+                        "startOffset": 1665,
+                        "endColumn": 41,
+                        "endOffset": 1705
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 3387,
+                    "endColumn": 47,
+                    "endOffset": 3430
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 1,
+                        "startOffset": 1707,
+                        "endColumn": 44,
+                        "endOffset": 1750
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 54,
+                    "startColumn": 4,
+                    "startOffset": 3435,
+                    "endColumn": 105,
+                    "endOffset": 3536
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 1,
+                        "startOffset": 2432,
+                        "endColumn": 102,
+                        "endOffset": 2533
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 3541,
+                    "endColumn": 124,
+                    "endOffset": 3661
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 1,
+                        "startOffset": 552,
+                        "endColumn": 121,
+                        "endOffset": 672
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 56,
+                    "startColumn": 4,
+                    "startOffset": 3666,
+                    "endColumn": 75,
+                    "endOffset": 3737
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 76,
+                        "startColumn": 1,
+                        "startOffset": 3833,
+                        "endColumn": 72,
+                        "endOffset": 3904
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 57,
+                    "startColumn": 4,
+                    "startOffset": 3742,
+                    "endColumn": 81,
+                    "endOffset": 3819
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 77,
+                        "startColumn": 1,
+                        "startOffset": 3906,
+                        "endColumn": 78,
+                        "endOffset": 3983
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 58,
+                    "startColumn": 4,
+                    "startOffset": 3824,
+                    "endColumn": 82,
+                    "endOffset": 3902
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 73,
+                        "startColumn": 1,
+                        "startOffset": 3683,
+                        "endColumn": 79,
+                        "endOffset": 3761
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 59,
+                    "startColumn": 4,
+                    "startOffset": 3907,
+                    "endColumn": 51,
+                    "endOffset": 3954
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endColumn": 51,
+                        "endOffset": 147
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 3959,
+                    "endColumn": 70,
+                    "endOffset": 4025
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 1,
+                        "startOffset": 3763,
+                        "endColumn": 67,
+                        "endOffset": 3829
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 4030,
+                    "endColumn": 44,
+                    "endOffset": 4070
+                },
+                "from": {
+                    "file": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\values-it\\strings.xml",
                     "position": {
                         "startLine": 57,
                         "startColumn": 1,

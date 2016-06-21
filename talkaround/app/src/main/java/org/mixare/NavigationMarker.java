@@ -63,7 +63,7 @@ public class NavigationMarker extends Marker {
 	@Override
 	public void draw(PaintScreen dw) {
 		drawArrow(dw);
-		drawTextBlock(dw);
+		drawTextBlock(dw,datasource);
 	}
 	
 	// 화살표를 그림

@@ -141,6 +141,7 @@ public class MixView extends Activity implements SensorEventListener,LocationLis
 
 	private boolean fError;	// 에러 여부
 
+
 	// 나침반 에러
 	private int compassErrorDisplayed = 0;
 
@@ -276,7 +277,7 @@ public class MixView extends Activity implements SensorEventListener,LocationLis
 			// 위치관리자의 설정
 			locationMgr = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 			// 위치정보 업데이트 설정. 2번째 인자 시간(1/1000s), 3번째 인자 거리(m)에 따라 갱신한다
-			locationMgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 10000,10, this);
+			locationMgr.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000,3, this);
 
 			//orientation sensor 설정
 			sensorMgr_ori=(SensorManager)getSystemService(Context.SENSOR_SERVICE);
@@ -470,6 +471,8 @@ public class MixView extends Activity implements SensorEventListener,LocationLis
 	protected void onResume() {
 		super.onResume();
 
+
+
 		try {
 			this.mWakeLock.acquire();	// 웨이크 록
 
@@ -477,6 +480,8 @@ public class MixView extends Activity implements SensorEventListener,LocationLis
 			mixContext.mixView = this;	// 컨텍스트의 믹스뷰를 설정하고
 			dataView.doStart();			// 데이터뷰 활성화
 			dataView.clearEvents();		// 이벤트 클리어
+
+
 
 			double angleX, angleY;		// 앵글의 x, y
 
@@ -610,6 +615,9 @@ public class MixView extends Activity implements SensorEventListener,LocationLis
 			downloadThread = new Thread(mixContext.downloadManager);
 			downloadThread.start();
 
+			//navi = new Navi2(mixContext);
+			//tt//1 = new Thread(navi);
+			//tt1.start();
 			//navi = new NavigatorV2(mixContext);
 			//tt1 = new Thread(navi);
 			//tt1.start();

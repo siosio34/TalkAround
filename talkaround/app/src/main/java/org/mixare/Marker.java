@@ -65,8 +65,8 @@ abstract public class Marker implements Comparable<Marker> {
 	protected Label txtLab = new Label();    // Label 클래스는 하단에서 정의한다
 	protected TextObj textBlock;
 
-    //TODO : NAVER MARKER용 설명
-    private String description = "";
+	//TODO : NAVER MARKER용 설명
+	private String description = "";
 
 	// 생성자. 타이틀과 위도, 경고, 고도값, 링크될 주소와 데이터 소스를 인자로 받는다 
 	public Marker(String title, double latitude, double longitude, double altitude, String link, DataSource.DATASOURCE datasource) {
@@ -129,18 +129,17 @@ abstract public class Marker implements Comparable<Marker> {
 		this.datasource = datasource;
 	}
 
-    //TODO : NAVER 마커 설명 GET/SET
-    public String getDescription() {
-        return description;
-    }
+	//TODO : NAVER 마커 설명 GET/SET
+	public String getDescription() {
+		return description;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
 	// 카메라 마커. 최초 위치와 투영될 카메라, 추가되는 x, y 값을 인자로 받는다 
-	private void cCMarker(MixVector originalPoint, Camera viewCam, float addX, float addY) {
-
+	private void cCMarker(MixVector originalPoint, Camera viewCam, float addX, float addY, DataSource.DATASOURCE type) {
 		// 임시 속성들
 		MixVector tmpa = new MixVector(originalPoint);
 		MixVector tmpc = new MixVector(upV);
@@ -157,8 +156,10 @@ abstract public class Marker implements Comparable<Marker> {
 		// 새 임시벡터를 선언하고
 		MixVector tmpb = new MixVector();
 		// 계산된 벡터들로 카메라 마커와 기호 마커를 사영한다
+
 		viewCam.projectPoint(tmpa, tmpb, addX, addY); //6
 		cMarker.set(tmpb); //7
+
 		viewCam.projectPoint(tmpc, tmpb, addX, addY); //6
 		signMarker.set(tmpb); //7
 	}
@@ -208,8 +209,8 @@ abstract public class Marker implements Comparable<Marker> {
 	}
 
 	// 그려질 위치를 계산
-	public void calcPaint(Camera viewCam, float addX, float addY) {
-		cCMarker(origin, viewCam, addX, addY);    // 카메라 마커를 생성
+	public void calcPaint(Camera viewCam, float addX, float addY, DataSource.DATASOURCE type) {
+		cCMarker(origin, viewCam, addX, addY, type);    // 카메라 마커를 생성
 		calcV(viewCam);    // 카메라의 고도를 계산
 	}
 
@@ -254,7 +255,7 @@ abstract public class Marker implements Comparable<Marker> {
 	// 스크린에 실제로 그려주는 메소드
 	public void draw(PaintScreen dw) {
 		drawCircle(dw);
-		drawTextBlock(dw);
+		drawTextBlock(dw,datasource);
 	}
 
 	// 스크린에 원을 그린다
@@ -280,7 +281,7 @@ abstract public class Marker implements Comparable<Marker> {
 	}
 
 	// 텍스트 블록을 그린다. 일반적으로 URL 등을 담고있는 데이터 소스 등에 사용된다
-	public void drawTextBlock(PaintScreen dw) {
+	public void drawTextBlock(PaintScreen dw,DataSource.DATASOURCE datasource) {
 		//TODO: 그려지게 될 상한선(최대높이)를 지정
 		float maxHeight = Math.round(dw.getHeight() / 10f) + 1;
 
@@ -289,16 +290,27 @@ abstract public class Marker implements Comparable<Marker> {
 		double d = distance;    // 거리. 미터 단위
 		DecimalFormat df = new DecimalFormat("@#");    // 숫자 포맷은 @숫자
 
-		// 위치에 따른 자신과의 거리 출력. 1000m 이상은 km로 대체한다
-		if (d < 1000.0) {
-			textStr = title + " " + df.format(d) + "m";
-		} else {
-			d = d / 1000.0;
-			textStr = title + " " + df.format(d) + "km";
+		if(datasource != DataSource.DATASOURCE.SNS) {
+			// 위치에 따른 자신과의 거리 출력. 1000m 이상은 km로 대체한다
+			if (d < 1000.0) {
+				textStr = title + " \n" + df.format(d) + "m";
+			} else {
+				d = d / 1000.0;
+				textStr = title + " \n" + df.format(d) + "km";
+			}
+		}
+
+		else {
+			if (d < 1000.0) {
+				textStr =  df.format(d) + "m";
+			} else {
+				d = d / 1000.0;
+				textStr =  df.format(d) + "km";
+			}
 		}
 
 		// 텍스트 블록(텍스트 오브젝트) 생성
-		textBlock = new TextObj(textStr, Math.round(maxHeight / 2f) + 1,
+		textBlock = new TextObj(textStr, Math.round(maxHeight / 3f) + 1,
 				250, dw, underline);
 
 		// 출력되는 상황일 경우
@@ -324,13 +336,13 @@ abstract public class Marker implements Comparable<Marker> {
 	}
 
 	// 데이터 뷰에서 터치시의 이벤트 처리 여부를 리턴
- 	// // TODO: 2016-04-13 나중에 클릭시 그 사이트 홈페이지가 뜨게 구현 합니당 0_<
+	// // TODO: 2016-04-13 나중에 클릭시 그 사이트 홈페이지가 뜨게 구현 합니당 0_<
 	public boolean fClick(float x, float y, MixContext ctx, MixState state) {
 		boolean evtHandled = false;
 
 		if (isClickValid(x, y)) {    // 클릭 가능한 지점인 경우(클릭된 걸로 파악된 경우)
 			// TODO: 2016-05-31 마커의 정보를 여기서 다띄워야 할거 같다.
-            // TODO: 여기서 리퀘스트 하는 함수도 만들어야될것같다.
+			// TODO: 여기서 리퀘스트 하는 함수도 만들어야될것같다.
 
 			evtHandled = state.handleEvent(ctx, URL, title, mGeoLoc);	// 마커의 URL 을 넘겨 이벤트 처리
 		}

@@ -83,24 +83,23 @@ public final class R {
         public static final int twitter=0x7f020042;
     }
     public static final class id {
-        public static final int btnPost=0x7f070006;
-        public static final int callout_overlay=0x7f070007;
-        public static final int callout_rightArrow=0x7f07000a;
-        public static final int callout_text=0x7f070009;
-        public static final int callout_upper=0x7f070008;
-        public static final int description_text=0x7f07000d;
-        public static final int etMessage=0x7f070005;
-        public static final int etName=0x7f070003;
-        public static final int icon=0x7f07000f;
-        public static final int list_checkbox=0x7f07000e;
-        public static final int list_text=0x7f07000c;
-        public static final int map_layout=0x7f070010;
-        public static final int nmapview=0x7f070011;
-        public static final int relativeLayout=0x7f070001;
-        public static final int row_layout=0x7f07000b;
-        public static final int tvCountry=0x7f070004;
-        public static final int tvIsConnected=0x7f070000;
-        public static final int tvName=0x7f070002;
+        public static final int btnPost=0x7f070005;
+        public static final int callout_overlay=0x7f070006;
+        public static final int callout_rightArrow=0x7f070009;
+        public static final int callout_text=0x7f070008;
+        public static final int callout_upper=0x7f070007;
+        public static final int description_text=0x7f07000c;
+        public static final int etMessage=0x7f070004;
+        public static final int etName=0x7f070002;
+        public static final int icon=0x7f07000e;
+        public static final int list_checkbox=0x7f07000d;
+        public static final int list_text=0x7f07000b;
+        public static final int map_layout=0x7f07000f;
+        public static final int nmapview=0x7f070010;
+        public static final int relativeLayout=0x7f070000;
+        public static final int row_layout=0x7f07000a;
+        public static final int tvCountry=0x7f070003;
+        public static final int tvName=0x7f070001;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

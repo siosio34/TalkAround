@@ -47,7 +47,7 @@ public class SnsMarker extends Marker {
     public void draw(PaintScreen dw) {
 
         // 텍스트 블록을 그린다
-        drawTextBlock(dw);
+        drawTextBlock(dw,datasource);
         // 보여지는 상황이라면
         if (isVisible) {
             float maxHeight = Math.round(dw.getHeight() / 10f) + 1;    // 최대 높이 계산

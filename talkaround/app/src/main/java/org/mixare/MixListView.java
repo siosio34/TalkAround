@@ -33,6 +33,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
@@ -60,7 +61,7 @@ import android.widget.Toast;
 public class MixListView extends ListActivity {
 
 	private static int list;	// 리스트의 종류(분류)
-	
+
 	// 벡터로 관리되는 항목들
 	private Vector<SpannableString> listViewMenu;	// 리스트뷰 메뉴
 	private Vector<String> selectedItemURL;			// 선택된 항목의 URL
@@ -69,12 +70,12 @@ public class MixListView extends ListActivity {
 	// 메인 컨텍스트와 데이터 뷰
 	private MixContext mixContext;
 	private DataView dataView;
-	
+
 	// 이전에 사용된 방식
 	//private static String selectedDataSource = "Wikipedia";
 	/*어떤 데이터 소스가 활성화 되었는지 체크하기 위함*/
 	//	private int clickedDataSourceItem = 0;
-	
+
 	private ListItemAdapter adapter;	// 리스트 아이템 어댑터
 	// 자체 주소로 사용될 커스텀 URL
 	public static String customizedURL = "http://map.naver.com/search2/interestSpot.nhn";
@@ -88,8 +89,8 @@ public class MixListView extends ListActivity {
 	public Vector<String> getDataSourceMenu() {
 		return dataSourceMenu;
 	}
-	
-	
+
+
 	// 데이터소스 체크여부를 리턴
 	public Vector<Boolean> getDataSourceChecked() {
 		return dataSourceChecked;
@@ -100,102 +101,124 @@ public class MixListView extends ListActivity {
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		//		mixCtx = MixView.ctx;
-		
+
 		// 데이터 뷰와 컨텍스트를 할당
-		dataView = MixView.dataView;	
+		dataView = MixView.dataView;
 		ctx = this;
 		mixContext = dataView.getContext();	// 메인 컨텍스트를 할당
 
 		// 리스트의 분류에 따른 처리
 		switch(list){
-		case 1:	// 데이터 소스를 선택하는 리스트
-			//TODO: this needs some cleanup
-			// TODO: 2016-05-31  이거는 나중에 기본은 학교 정보를 받아 오도록 하고 카페,버스정류장,학식 같은 편의정보도 받아오도록하자.
-			// 메뉴 타이틀을 설정
-			dataSourceMenu = new Vector<String>();
+			case 1:	// 데이터 소스를 선택하는 리스트
+				//TODO: this needs some cleanup
+				// TODO: 2016-05-31  이거는 나중에 기본은 학교 정보를 받아 오도록 하고 카페,버스정류장,학식 같은 편의정보도 받아오도록하자.
+				// 메뉴 타이틀을 설정
+				dataSourceMenu = new Vector<String>();
 
-			dataSourceMenu.add("학교 정보(*)");
-			dataSourceMenu.add("학교 식당(*)");
-			dataSourceMenu.add("카페");
-			dataSourceMenu.add("버스 정류장(*)");
-			dataSourceMenu.add("편의점");
-			dataSourceMenu.add("식당");
-			dataSourceMenu.add("SNS(*)");
+				dataSourceMenu.add("[KHU] 학교 정보");
+				dataSourceMenu.add("[KHU] 학교 식당");
+				dataSourceMenu.add("버스 정류장");
+				dataSourceMenu.add("카페");
+				dataSourceMenu.add("편의점");
+				dataSourceMenu.add("식당");
+				dataSourceMenu.add("[SNS] 발자취");
 
-			// 각 항목의 체크여부를 등록
-			dataSourceChecked = new Vector<Boolean>();
-			//dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.OSM));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.SCHOOL));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.SCHOOLRestaurant));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.CAFE));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.BUSSTOP));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.Convenience));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.Restaurant));
-			dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.SNS));
+				// 각 항목의 체크여부를 등록
+				dataSourceChecked = new Vector<Boolean>();
+				//dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.OSM));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.SCHOOL));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.SCHOOLRestaurant));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.BUSSTOP));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.CAFE));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.Convenience));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.Restaurant));
+				dataSourceChecked.add(mixContext.isDataSourceSelected(DATASOURCE.SNS));
 
-			// 리스트 어댑터를 생성하고 설정
-			adapter = new ListItemAdapter(this);
-			//adapter.colorSource(getDataSource());
-			getListView().setTextFilterEnabled(true);
-			setListAdapter(adapter);
-			break;
+				// 리스트 어댑터를 생성하고 설정
+				adapter = new ListItemAdapter(this);
+				//adapter.colorSource(getDataSource());
+				getListView().setTextFilterEnabled(true);
+				setListAdapter(adapter);
+				break;
 
-		case 2:	// 데이터 항목들을 선택하는 리스트
-			// 선택항목 URL 과 리스트 뷰의 메뉴 항목
-			selectedItemURL = new Vector<String>();
-			listViewMenu = new Vector<SpannableString>();
-			// 데이터 핸들러
-			DataHandler jLayer = dataView.getDataHandler();
-			
-			// 데이터 뷰가 얼어있고 마커의 수가 한개 이상 존재할 때
-			if (dataView.isFrozen() && jLayer.getMarkerCount() > 0){
-				selectedItemURL.add("search");	// 선택 항목의 URL 에 'search' 추가
-			}
+			case 2:	// 데이터 항목들을 선택하는 리스트
+				// 선택항목 URL 과 리스트 뷰의 메뉴 항목
+				selectedItemURL = new Vector<String>();
+				listViewMenu = new Vector<SpannableString>();
+				// 데이터 핸들러
+				DataHandler jLayer = dataView.getDataHandler();
+
+				// 데이터 뷰가 얼어있고 마커의 수가 한개 이상 존재할 때
+				if (dataView.isFrozen() && jLayer.getMarkerCount() > 0){
+					selectedItemURL.add("search");	// 선택 항목의 URL 에 'search' 추가
+				}
 
 			/*모든 마커 항목들을 타이틀과 URL 벡터에 추가한다*/
-			for (int i = 0; i < jLayer.getMarkerCount(); i++) {
-				Marker ma = jLayer.getMarker(i);	// 데이터 핸들러로부터 마커를 읽는다
-				// 마커가 활성화 상태일 때 
-				if(ma.isActive()) {
-					if (ma.getURL()!=null) {
+				for (int i = 0; i < jLayer.getMarkerCount(); i++) {
+					Marker ma = jLayer.getMarker(i);	// 데이터 핸들러로부터 마커를 읽는다
+					// 마커가 활성화 상태일 때
+					if(ma.isActive()) {
+						if (ma.getURL()!=null) {
 						/*웹사이트가 가능한 상태라면 타이틀에 밑줄을 친다*/
-							underlinedTitle = new SpannableString(ma.getTitle());
-							underlinedTitle.setSpan(new UnderlineSpan(), 0, underlinedTitle.length(), 0);
+							String tagName= "";
+
+							DATASOURCE tempDataSource = ma.getDatasource();
+
+							if(tempDataSource == DATASOURCE.SCHOOL || tempDataSource == DATASOURCE.SCHOOLRestaurant)
+								tagName = "[KHU] ";
+							else if(tempDataSource == DATASOURCE.BUSSTOP)
+								tagName = "[BUS] ";
+							else if(tempDataSource == DATASOURCE.CAFE)
+								tagName ="[카페] ";
+							else if(tempDataSource == DATASOURCE.Convenience)
+								tagName ="[편의점] ";
+							else if(tempDataSource == DATASOURCE.Restaurant)
+								tagName ="[식당] ";
+							else
+								tagName ="[SNS] ";
+
+
+
+							underlinedTitle = new SpannableString("  "+String.valueOf((int) ma.getDistance()) + "m"  + "   |   " + tagName + ma.getTitle());
+
+							//underlinedTitle.setSpan(new UnderlineSpan(), 0, underlinedTitle.length(), 0);
 							// 리스트 뷰에 추가한다
 							listViewMenu.add(underlinedTitle); // 리스트 뷰 메뉴
+
 						} else {
 							// 그 외의 경우엔 그대로 추가
 							listViewMenu.add(new SpannableString(ma.getTitle()));
 						}
+						Log.i("마커링크", ma.getURL());
 					/*타이틀이 일치하는 웹사이트를 등록*/
-					if (ma.getURL()!=null)
-						selectedItemURL.add(ma.getURL());
+						if (ma.getURL()!=null)
+							selectedItemURL.add(ma.getURL());
 					/*특정한 타이틀에 사용가능한 URL이 없을 경우*/
-					else
-						selectedItemURL.add("");
+						else
+							selectedItemURL.add("");
+					}
 				}
-			}
 
-			// 데이터 뷰가 얼어 있을 경우
-			if (dataView.isFrozen()) {
-				// 검색 알림 텍스트. 어떤 데이터 소스로부터 읽어왔는지 출력한다
-				TextView searchNotificationTxt = new TextView(this);
-				searchNotificationTxt.setVisibility(View.VISIBLE);
-				searchNotificationTxt.setText(getString(DataView.SEARCH_ACTIVE_1)+" "+ mixContext.getDataSourcesStringList() + getString(DataView.SEARCH_ACTIVE_2));
-				searchNotificationTxt.setWidth(MixView.dWindow.getWidth());
+				// 데이터 뷰가 얼어 있을 경우
+				if (dataView.isFrozen()) {
+					// 검색 알림 텍스트. 어떤 데이터 소스로부터 읽어왔는지 출력한다
+					TextView searchNotificationTxt = new TextView(this);
+					searchNotificationTxt.setVisibility(View.VISIBLE);
+					searchNotificationTxt.setText(getString(DataView.SEARCH_ACTIVE_1)+" "+ mixContext.getDataSourcesStringList() + getString(DataView.SEARCH_ACTIVE_2));
+					searchNotificationTxt.setWidth(MixView.dWindow.getWidth());
 
-				searchNotificationTxt.setPadding(10, 2, 0, 0);
-				searchNotificationTxt.setBackgroundColor(Color.DKGRAY);
-				searchNotificationTxt.setTextColor(Color.WHITE);
+					searchNotificationTxt.setPadding(10, 2, 0, 0);
+					searchNotificationTxt.setBackgroundColor(Color.WHITE);
+					searchNotificationTxt.setTextColor(Color.BLACK);
 
-				getListView().addHeaderView(searchNotificationTxt);
+					getListView().addHeaderView(searchNotificationTxt);
 
-			}
+				}
 
-			// 리스트 어탭터를 세팅한다
-			setListAdapter(new ArrayAdapter<SpannableString>(this, android.R.layout.simple_list_item_1,listViewMenu));
-			getListView().setTextFilterEnabled(true);
-			break;
+				// 리스트 어탭터를 세팅한다
+				setListAdapter(new ArrayAdapter<SpannableString>(this, android.R.layout.simple_list_item_1,listViewMenu));
+				getListView().setTextFilterEnabled(true);
+				break;
 
 		}
 	}
@@ -257,7 +280,7 @@ public class MixListView extends ListActivity {
 			dataView.setFrozen(true);	// 데이터뷰를 얼리고 리스트를 세팅 후 출력
 			setList(2);
 			finish();
-			Intent intent1 = new Intent(this, MixListView.class); 
+			Intent intent1 = new Intent(this, MixListView.class);
 			startActivityForResult(intent1, 42);
 		}
 	}
@@ -267,17 +290,17 @@ public class MixListView extends ListActivity {
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		super.onListItemClick(l, v, position, id);
 		switch(list){	// 리스트의 종류에 따른 처리
-		/*Data Sources*/  
-		case 1:	// 데이터 소스는 체크박스로 사용여부를 관리한다
-			//clickOnDataSource(position);	
-			CheckBox cb = (CheckBox) v.findViewById(R.id.list_checkbox);
-			cb.toggle();	// 누를시 마다 토글
-			break;
+		/*Data Sources*/
+			case 1:	// 데이터 소스는 체크박스로 사용여부를 관리한다
+				//clickOnDataSource(position);
+				CheckBox cb = (CheckBox) v.findViewById(R.id.list_checkbox);
+				cb.toggle();	// 누를시 마다 토글
+				break;
 
 		/*List View*/
-		case 2:	// 리스트 뷰의 클릭 처리
-			clickOnListView(position);
-			break;
+			case 2:	// 리스트 뷰의 클릭 처리
+				clickOnListView(position);
+				break;
 		}
 
 	}
@@ -285,18 +308,18 @@ public class MixListView extends ListActivity {
 	// 리스트 뷰를 클릭 했을 경우
 
 	// TODO: 2016-06-02 요것은 리스트 뷰 클릭했을때 생성 되는 부분 
-	
+
 	public void clickOnListView(int position){
 		String selectedURL = position < selectedItemURL.size() ? selectedItemURL.get(position) : null;
 		/*이 항목에 가능한 웹사이트가 없을 경우*/
 		if (selectedURL == null || selectedURL.length() <= 0)
-			Toast.makeText( this, getString(DataView.NO_WEBINFO_AVAILABLE), Toast.LENGTH_LONG ).show();			
+			Toast.makeText( this, getString(DataView.NO_WEBINFO_AVAILABLE), Toast.LENGTH_LONG ).show();
 		else if("search".equals(selectedURL)){
 			dataView.setFrozen(false);	// 데11이터 뷰를 얼리고 핸들러로부터 오리지널 마커 리스트를 읽어옴
 			dataView.getDataHandler().setMarkerList(originalMarkerList);
 			setList(2);	// 리스트에 결과를 할당하고 액티비티를 호출한다
 			finish();
-			Intent intent1 = new Intent(this, MixListView.class); 
+			Intent intent1 = new Intent(this, MixListView.class);
 			startActivityForResult(intent1, 42);
 		}
 		else {	// 가능한 웹 페이지가 있을 경우, 파싱을 통해 웹페이지를 불러온다
@@ -314,7 +337,7 @@ public class MixListView extends ListActivity {
 	// 컨텍스트 메뉴 생성시
 	public static void createContextMenu(ImageView icon) {
 		// 리스너 등록
-		icon.setOnCreateContextMenuListener(new OnCreateContextMenuListener() {				
+		icon.setOnCreateContextMenuListener(new OnCreateContextMenuListener() {
 			@Override
 			public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 				int index=0;
@@ -326,12 +349,12 @@ public class MixListView extends ListActivity {
 						break;
 					case 2:
 						break;
-				case 3:
-					menu.setHeaderTitle("OpenStreetMap Menu");
-					menu.add(index, index, index, "We are working on it...");
-					break;
-				case 4:	// 커스텀 URL을 입력가능한 얼럿 다이얼로그를 생성한다
-					break;
+					case 3:
+						menu.setHeaderTitle("OpenStreetMap Menu");
+						menu.add(index, index, index, "We are working on it...");
+						break;
+					case 4:	// 커스텀 URL을 입력가능한 얼럿 다이얼로그를 생성한다
+						break;
 
 					case 5:
 						break;
@@ -353,7 +376,7 @@ public class MixListView extends ListActivity {
 		// 얼려있는 데이터뷰를 해동시킨다
 		if(dataView.isFrozen())
 			dataView.setFrozen(false);
-		
+
 		// 각 포지션에 따라 데이터소스 사용여부를 토글한다
 		switch(position){
 
@@ -364,10 +387,10 @@ public class MixListView extends ListActivity {
 				mixContext.toogleDataSource(DATASOURCE.SCHOOLRestaurant);
 				break;
 			case 2:
-				mixContext.toogleDataSource(DATASOURCE.CAFE);
+				mixContext.toogleDataSource(DATASOURCE.BUSSTOP);
 				break;
 			case 3:
-				mixContext.toogleDataSource(DATASOURCE.BUSSTOP);
+				mixContext.toogleDataSource(DATASOURCE.CAFE);
 				break;
 			case 4:
 				mixContext.toogleDataSource(DATASOURCE.Convenience);
@@ -378,9 +401,9 @@ public class MixListView extends ListActivity {
 			case 6:
 				mixContext.toogleDataSource(DATASOURCE.SNS);
 				break;
-		//	case 6:
-		//		mixContext.toogleDataSource(DATASOURCE.ARRIVEBUS);
-		//		break;
+			//	case 6:
+			//		mixContext.toogleDataSource(DATASOURCE.ARRIVEBUS);
+			//		break;
 
 		}
 	}
@@ -390,11 +413,11 @@ public class MixListView extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		int base = Menu.FIRST;
-		
+
 		// 맵뷰와 카메라 뷰 버튼을 생성
 
 		/*메뉴 항목 정의*/
-		MenuItem item1 = menu.add(base, base, base, getString(DataView.MENU_ITEM_3)); 
+		MenuItem item1 = menu.add(base, base, base, getString(DataView.MENU_ITEM_3));
 		MenuItem item2 = menu.add(base, base+1, base+1, getString(DataView.MENU_CAM_MODE));
 
 		/*메뉴 항목의 아이콘 할당*/
@@ -409,15 +432,15 @@ public class MixListView extends ListActivity {
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch(item.getItemId()){
 		/*Map View*/
-		case 1:
-			createMixMap();	// 맵 뷰 생성
-			finish();
-			break;
+			case 1:
+				createMixMap();	// 맵 뷰 생성
+				finish();
+				break;
 			
 		/*back to Camera View*/
-		case 2:
-			finish();
-			break;
+			case 2:
+				finish();
+				break;
 		}
 		return true;
 	}
@@ -425,17 +448,17 @@ public class MixListView extends ListActivity {
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
 		switch(item.getItemId()){
-		case 1: 
-			break;
-		case 2: 
-			break;
+			case 1:
+				break;
+			case 2:
+				break;
 		}
 		return false;
 	}
 
 	// 맵 뷰를 생성하여 호출한다
 	public void createMixMap(){
-		Intent intent2 = new Intent(MixListView.this, MixMap.class); 
+		Intent intent2 = new Intent(MixListView.this, MixMap.class);
 		startActivityForResult(intent2, 20);
 	}
 
@@ -464,8 +487,8 @@ class ListItemAdapter extends BaseAdapter {
 	private LayoutInflater myInflater;	// 레이아웃을 전개 할 인플레이터
 	static ViewHolder holder;	// 뷰의 홀더
 	// 배경, 텍스트, 설명의 컬러
-	private int[] bgcolors = new int[] {0,0,0,0,0};
 	private int[] textcolors = new int[] {Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE,Color.WHITE};
+	private int[] bgcolors = new int[] {0,0,0,0,0};
 	private int[] descriptioncolors = new int[] {Color.GRAY,Color.GRAY,Color.GRAY,Color.GRAY,Color.GRAY};
 
 	public static boolean icon_clicked = false;	// 아이콘이 클릭되었는지 여부
@@ -483,7 +506,7 @@ class ListItemAdapter extends BaseAdapter {
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		itemPosition = position;	// 포지션을 저장
-		
+
 		// 전환 뷰가 없을 경우 리스트 뷰의 레이아웃과 데이터를 할당
 		if (convertView == null) {
 			// 메인 레이아웃을 전개하여 할당 
@@ -495,7 +518,7 @@ class ListItemAdapter extends BaseAdapter {
 			holder.description = (TextView) convertView.findViewById(R.id.description_text);
 			holder.checkbox = (CheckBox) convertView.findViewById(R.id.list_checkbox);
 			holder.icon = (ImageView) convertView.findViewById(R.id.icon);
-			
+
 			convertView.setTag(holder);
 		}
 		else{
@@ -505,7 +528,7 @@ class ListItemAdapter extends BaseAdapter {
 
 		// 아이콘을 클릭 가능하게 설정하고
 		holder.icon.setPadding(20, 8, 20, 8);
-		holder.icon.setClickable(true);        
+		holder.icon.setClickable(true);
 		// 리스너를 등록
 		holder.icon.setOnTouchListener(new View.OnTouchListener() {
 			@Override
@@ -522,7 +545,7 @@ class ListItemAdapter extends BaseAdapter {
 		if(position!=4){
 			holder.icon.setVisibility(View.INVISIBLE);
 		}
-		
+
 		// 각 항목들의 체크박스의 동작등을 등록한다
 		holder.checkbox.setChecked(mixListView.getDataSourceChecked().get(position));
 
@@ -535,14 +558,14 @@ class ListItemAdapter extends BaseAdapter {
 			}
 
 		});
-		
+
 		// 텍스트와 설명의 위치 조절(여백값 설정)
 		holder.text.setPadding(20, 8, 0, 0);
 		holder.description.setPadding(20, 40, 0, 0);
 
 		// 텍스트와 설명의 내용 할당
 		holder.text.setText(mixListView.getDataSourceMenu().get(position));
-		
+
 		// 색 설정
 		int colorPos = position % bgcolors.length;
 		convertView.setBackgroundColor(bgcolors[colorPos]);
@@ -569,10 +592,11 @@ class ListItemAdapter extends BaseAdapter {
 			textcolors[i]=Color.WHITE;
 		}
 
-		if (source.equals("OpenStreetMap"))
-			changeColor(3, Color.WHITE, Color.DKGRAY);
-		else if (source.equals("OwnURL"))
-			changeColor(4, Color.WHITE, Color.DKGRAY);
+		//if (source.equals("CAFE"))
+		//	changeColor(3, Color.RED, Color.RED);
+		//else if (source.equals("OwnURL"))
+		//	changeColor(4, Color.WHITE, Color.DKGRAY);
+
 	}
 
 	// 데이터 소스 메뉴의 수를 리턴

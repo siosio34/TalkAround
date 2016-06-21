@@ -1,0 +1,62 @@
+<?php
+	ini_set("display_errors", 0);	
+?>
+
+<style>
+	*{margin:0;padding:0;}
+	h2{background:#00c73c;font-size:18px;padding:12px 10px;color:#fff}
+	h2 span{background:#009f30;font-weight:normal;padding:5px;color:#ddd;float:right;margin-top:-3px;display:block;font-size:13px}
+	
+	ul{}
+	ul li{border-bottom:1px solid #ddd;margin-left:10px;list-style:none}
+	ul li .name{padding:10px 0;float:left;line-height:31px}
+	ul li .predict_wrap{font-size:12px;float:right;padding:10px;text-align:right}
+	ul li .predict_wrap span{color:#bbb;border-left:1px solid #bbb;padding-left:5px;margin-left:3px;display:inline-block;width:150px;height:12px;line-height;14px;overflow:hidden}
+	
+	.clear{clear:both;float:none}
+</style>
+
+<script>
+	setTimeout(function(){
+		location.reload();
+	}, 5000);
+</script>
+
+<?php
+
+$stationid=json_decode(parse_web($baseUrl.'/getStationPageList.php?keyword='.$_GET['station']));
+
+if($stationid->result->resultCode!=0){
+	echo "정류장 ID를 알아내지 못했습니다 (".$stationid->result->resultCode.")";
+	exit;
+}
+
+echo "<h2><span>".$stationid->result->stationList[0]->mobileNo."</span> ".$stationid->result->stationList[0]->stationName." (".$stationid->result->stationList[0]->regionName.")</h2>";
+
+$id=$stationid->result->stationList[0]->stationId;
+
+
+
+$businfo=json_decode(parse_web($baseUrl.'/getBusStationArrival.php?stationId='.$id));
+
+if(!isset($businfo->busStationArrivalInfo) || $businfo->busStationArrivalInfo->resultCode!=0){
+	echo "결과가 없습니다.";
+	exit;
+}
+
+echo "<ul>";
+foreach($businfo->busStationArrivalInfo->arrivalList as $bus){
+	echo "<li>";
+		echo '<div class="name">'.$bus->routeName.'</div>';
+		echo '<div class="predict_wrap">';
+			echo '<div class="predict">'.$bus->predictTime1.'분 전
+					<span>'.$bus->locationNo1.' 정류장 전 ('.$bus->stationNm1.')</span></div>';
+			echo '<div class="predict">'.$bus->predictTime2.'분 전
+					<span>'.$bus->locationNo2.' 정류장 전 ('.$bus->stationNm2.')</span></div>';
+		echo '</div>';
+		echo '<div class="clear"></div>';
+	echo "</li>";
+}
+echo "</ul>";
+
+?>

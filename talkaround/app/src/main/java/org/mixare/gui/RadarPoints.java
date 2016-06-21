@@ -36,13 +36,13 @@ public class RadarPoints implements ScreenObj {
 	float range;	// 레이더의 각도
 	public static float RADIUS = 40;	// 스크린 픽셀의 각도. 기본 40도
 	static float originX = 0 , originY = 0;	// 스크린상의 좌표
-	static int radarColor = Color.argb(100, 0, 0, 200);	// 색상. 기본은 약간 푸른색
-	
+	static int radarColor = Color.argb(100,50, 50, 50);	// 색상. 기본은 약간 푸른색
+
 	// 실제 출력을 담당하는 메소드 
 	public void paint(PaintScreen dw) {
 		/** radius is in KM. */
 		range = view.getRadius() * 1000;
-		
+
 		// 레이더를 그린다
 		dw.setFill(true);
 		dw.setColor(radarColor);
@@ -65,7 +65,7 @@ public class RadarPoints implements ScreenObj {
 			// 최종적으로 색 설정과 출력
 			if (pm.isActive() && (x * x + y * y < RADIUS * RADIUS)) {
 				dw.setFill(true);
-				
+
 				dw.setColor(DataSource.getColor(pm.getDatasource()));
 				dw.paintRect(x + RADIUS - 1, y + RADIUS - 1, 2, 2);
 			}

@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\mapbg_blank.png",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\exploded-aar\\talkaround\\nmaps\\unspecified\\res\\drawable-nodpi\\mapbg_blank.png"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\mapbg_blank.png",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\exploded-aar\\talkaround\\nmaps\\unspecified\\res\\drawable-nodpi\\mapbg_blank.png"
+    },
+    {
         "merged": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\mapbg_blank.png",
         "source": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\build\\intermediates\\exploded-aar\\temp\\nmaps\\unspecified\\res\\drawable-nodpi\\mapbg_blank.png"
     }

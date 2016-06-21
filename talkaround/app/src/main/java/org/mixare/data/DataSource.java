@@ -37,11 +37,11 @@ public class DataSource {
 
     // 데이터 소스와 데이터 포맷의 열거형 변수
     public enum DATASOURCE {
-        SCHOOL, SCHOOLRestaurant, CAFE, BUSSTOP,Convenience, Restaurant,SNS, NAVER
+        SCHOOL, SCHOOLRestaurant,BUSSTOP, CAFE, Convenience, Restaurant,SNS, NAVER
     };
 
     public enum DATAFORMAT {
-        SCHOOL, SCHOOLRestaurant, CAFE, BUSSTOP,Convenience,Restaurant,SNS, NAVER
+        SCHOOL, SCHOOLRestaurant,BUSSTOP, CAFE ,Convenience,Restaurant,SNS, NAVER
     };
 
     public enum DATAFLAG {
@@ -84,6 +84,8 @@ public class DataSource {
     public static Bitmap routeIcon;
     public static Bitmap messeage_icon;
 
+    public static Bitmap sns_add;
+
     //TODO : naver map URL
     private static final String NAVER_MAP_URL =		"http://map.naver.com/findroute2/findWalkRoute.nhn?call=route2&output=json&coord_type=naver&search=0";
 
@@ -98,10 +100,10 @@ public class DataSource {
     public static void createIcons(Resources res) {
         //twitterIcon = BitmapFactory.decodeResource(res, R.drawable.twitter);
         //buzzIcon = BitmapFactory.decodeResource(res, R.drawable.coffee2);
-       // schoolIcon ;
-       // schoolRestaurant;
+        // schoolIcon ;
+        // schoolRestaurant;
         cafeIcon = BitmapFactory.decodeResource(res, R.drawable.icon_cafe);
-        messeage_icon = BitmapFactory.decodeResource(res,R.drawable.sns_0);
+        messeage_icon = BitmapFactory.decodeResource(res,R.drawable.sns_2);
         busIcon = BitmapFactory.decodeResource(res,R.drawable.icon_metro);
         restraurantIcon = BitmapFactory.decodeResource(res,R.drawable.icon_store);
         convenienceIcon = BitmapFactory.decodeResource(res,R.drawable.icon_conveni);
@@ -122,7 +124,8 @@ public class DataSource {
         physical = BitmapFactory.decodeResource(res,R.drawable.school_physical);
         viliage = BitmapFactory.decodeResource(res,R.drawable.school_village);
         basic = BitmapFactory.decodeResource(res,R.drawable.school_default);
-      // routeIcon;
+        sns_add = BitmapFactory.decodeResource(res,R.drawable.sns_add);
+        // routeIcon;
     }
 
     // 아이콘 비트맵의 게터
@@ -130,12 +133,12 @@ public class DataSource {
         Bitmap bitmap = null;
         switch (ds) {
 
-          // case "artdesign":
-          //     bitmap = cafeIcon;
-          //     break;
-          // case SCHOOLRestaurant:
-          //     bitmap = cafeIcon;
-          //     break;
+            // case "artdesign":
+            //     bitmap = cafeIcon;
+            //     break;
+            // case SCHOOLRestaurant:
+            //     bitmap = cafeIcon;
+            //     break;
             case "artdesign":
                 bitmap = artdesignicon;
                 break;
@@ -193,7 +196,10 @@ public class DataSource {
             case "SNS":
                 bitmap = messeage_icon;
                 break;
-            // TODO: 2016-05-31  여기에 케이스 더 다양하게해서 비트맵 파일을 받아놔야된다. 
+            case "SNSADD":
+                bitmap = sns_add;
+                break;
+            // TODO: 2016-05-31  여기에 케이스 더 다양하게해서 비트맵 파일을 받아놔야된다.
 
         }
         return bitmap;
@@ -236,7 +242,7 @@ public class DataSource {
                 ret=DATAFORMAT.NAVER;
                 break;
 
-             default:
+            default:
                 ret = DATAFORMAT.SCHOOL;
                 break;
 
@@ -310,21 +316,21 @@ public class DataSource {
 
 
 
-              // case OWNURL:
-              //     //ret = "http://map.naver.com/search2/searchBusStopWithinRectangle.nhn?bounds=" +
-              //     //        Double.toString(lon - 0.02) + "%3B" + Double.toString(lat - 0.01) +"%3B" +
-              //     //        Double.toString(lon + 0.02) + "%3B" + Double.toString(lat + 0.01) +"%count=100&level11";
-              //     //ret += "?type=CAFE&boundary=" + Double.toString(lon - 0.02) + "%3B" +
-              //     //        Double.toString(lat - 0.01) + "%3B" + Double.toString(lon + 0.02) +
-              //     //        "%3B" + Double.toString(lat + 0.01) + "&pageSize=100";
-              //     ret = "http://map.naver.com/search2/interestSpot.nhn?type=CAFE&boundary=" + Double.toString(lon - 0.02) + "%3B" +
-              //             Double.toString(lat - 0.01) + "%3B" + Double.toString(lon + 0.02) +
-              //             "%3B" + Double.toString(lat + 0.01) + "&pageSize=100";
-              //     break;
+                // case OWNURL:
+                //     //ret = "http://map.naver.com/search2/searchBusStopWithinRectangle.nhn?bounds=" +
+                //     //        Double.toString(lon - 0.02) + "%3B" + Double.toString(lat - 0.01) +"%3B" +
+                //     //        Double.toString(lon + 0.02) + "%3B" + Double.toString(lat + 0.01) +"%count=100&level11";
+                //     //ret += "?type=CAFE&boundary=" + Double.toString(lon - 0.02) + "%3B" +
+                //     //        Double.toString(lat - 0.01) + "%3B" + Double.toString(lon + 0.02) +
+                //     //        "%3B" + Double.toString(lat + 0.01) + "&pageSize=100";
+                //     ret = "http://map.naver.com/search2/interestSpot.nhn?type=CAFE&boundary=" + Double.toString(lon - 0.02) + "%3B" +
+                //             Double.toString(lat - 0.01) + "%3B" + Double.toString(lon + 0.02) +
+                //             "%3B" + Double.toString(lat + 0.01) + "&pageSize=100";
+                //     break;
 
-              // case ARRIVEBUS:
-              //     ret = "http://m.gbis.go.kr/search/getStationPageList.do?keyword=29040";
-              //     break;
+                // case ARRIVEBUS:
+                //     ret = "http://m.gbis.go.kr/search/getStationPageList.do?keyword=29040";
+                //     break;
 
 
             }

@@ -57,19 +57,19 @@ public class HttpPostSNS extends Activity implements OnClickListener{
         curlocate = (PhysicalPlace)intent.getSerializableExtra("currentGPSInfo2");
 
         // get reference to the views
-        tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
+        // tvIsConnected = (TextView) findViewById(R.id.tvIsConnected);
         etName = (EditText) findViewById(R.id.etName);
         etMessage = (EditText) findViewById(R.id.etMessage);
         btnPost = (Button) findViewById(R.id.btnPost);
 
         // check if you are connected or not
-        if(isConnected()){
-            tvIsConnected.setBackgroundColor(0xFF00CC00);
-            tvIsConnected.setText("You are conncted");
-        }
-        else{
-            tvIsConnected.setText("You are NOT conncted");
-        }
+        //  if(isConnected()){
+        //      tvIsConnected.setText("");
+        //  }
+        //  else{
+        //      tvIsConnected.setBackgroundColor(0xFFCCCC00);
+        //      tvIsConnected.setText("인터넷 연결을 확인해주세요");
+        //  }
 
         // add click listener to Button "POST"
         btnPost.setOnClickListener(this);

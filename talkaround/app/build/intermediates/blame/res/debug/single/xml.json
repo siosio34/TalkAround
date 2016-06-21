@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\xml\\searchable.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\xml\\searchable.xml"
+    },
+    {
         "merged": "C:\\Users\\siosi\\Documents\\temp (2) (2) (4) (2)\\temp\\app\\build\\intermediates\\res\\merged\\debug\\xml\\searchable.xml",
         "source": "C:\\Users\\siosi\\Documents\\temp (2) (2) (4) (2)\\temp\\app\\src\\main\\res\\xml\\searchable.xml"
     },
@@ -22,6 +26,10 @@
     {
         "merged": "C:\\Users\\siosi\\Documents\\temp (2) (2)\\temp\\app\\build\\intermediates\\res\\merged\\debug\\xml\\searchable.xml",
         "source": "C:\\Users\\siosi\\Documents\\temp (2) (2)\\temp\\app\\src\\main\\res\\xml\\searchable.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\xml\\searchable.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\xml\\searchable.xml"
     },
     {
         "merged": "C:\\temp (2) (2) (4) (2)\\temp\\app\\build\\intermediates\\res\\merged\\debug\\xml\\searchable.xml",

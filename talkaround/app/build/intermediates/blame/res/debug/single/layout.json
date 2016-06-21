@@ -20,8 +20,20 @@
         "source": "C:\\Users\\siosi\\Documents\\temp (2) (2) (4) (2)\\temp\\app\\src\\main\\res\\layout\\main.xml"
     },
     {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\callout_overlay_view.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\layout\\callout_overlay_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\siosi\\Documents\\temp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
         "source": "C:\\Users\\siosi\\Documents\\temp\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\layout\\map.xml"
     },
     {
         "merged": "C:\\Users\\siosi\\Documents\\temp (2) (2)\\temp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
@@ -32,6 +44,10 @@
         "source": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\src\\main\\res\\layout\\map.xml"
     },
     {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\callout_overlay_view.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\layout\\callout_overlay_view.xml"
+    },
+    {
         "merged": "C:\\Users\\siosi\\Documents\\temp (2)\\temp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
         "source": "C:\\Users\\siosi\\Documents\\temp (2)\\temp\\app\\src\\main\\res\\layout\\main.xml"
     },
@@ -40,8 +56,20 @@
         "source": "C:\\temp (2) (2) (4) (2)\\temp\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
         "merged": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.2\\talkaround\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
         "merged": "C:\\Users\\siosi\\Documents\\temp (2) (2)\\temp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
@@ -54,5 +82,9 @@
     {
         "merged": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\main.xml",
         "source": "D:\\Users\\PNY\\Downloads\\talkaround_v1.0\\temp\\app\\src\\main\\res\\layout\\main.xml"
+    },
+    {
+        "merged": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\build\\intermediates\\res\\merged\\debug\\layout\\map.xml",
+        "source": "C:\\Users\\siosi\\Documents\\talkaround_v1.1\\talkaround\\app\\src\\main\\res\\layout\\map.xml"
     }
 ]
